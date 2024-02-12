@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Для предотвращения появления скроллбара */
+}
+
+#game-container {
+  position: relative;
+  width: 100vw; /* 100% ширины видимой области */
+  height: 100vh; /* 100% высоты видимой области */
+  border: 20px solid black; /* Размер бордюра */
+  box-sizing: border-box; /* Учитываем размеры бордюра при расчете размера контейнера */
+}
+
+#snake {
+  position: absolute;
+  width: 20px; /* Размер головы змейки */
+  height: 20px;
+  background-color: green;
+  z-index: 1; /* Позволяет змее быть поверх еды */
+}
+
+.snake-segment {
+  position: absolute;
+  width: 20px; /* Размер сегментов змейки */
+  height: 20px;
+  background-color: green;
+}
+
+#food {
+  position: absolute;
+  width: 20px; /* Размер еды */
+  height: 20px;
+  background-color: red;
+  z-index: 0; /* Позволяет еде быть под змеей */
+}
+
+#start-screen,
+#end-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#start-button,
+#next-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease; /* Анимация при наведении */
+}
+
+#start-button:hover,
+#next-button:hover {
+  transform: scale(1.1); /* Увеличиваем размер кнопки на 10% */
+}
+#restart-button {
+  margin-top: 10px; /* Добавляем отступ сверху */
+}
